@@ -1,0 +1,136 @@
+/* General resets and base styles */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logout-button {
+    background-color: #e50914;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #f40612;
+}
+
+/* Hero banner styles */
+.hero-banner {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 40px;
+    box-shadow: inset 0 -100px 100px -50px rgba(20, 20, 20, 0.8);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Main content */
+.movies-main {
+    padding: 20px 40px;
+}
+
+.movies-main h2 {
+    margin-bottom: 20px;
+}
+
+/* Movies row */
+.movies-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.movie-card {
+    min-width: 200px;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(229, 9, 20, 0.8);
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.movie-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Scrollbar styling for movies row */
+.movies-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movies-row::-webkit-scrollbar-thumb {
+    background-color: #e50914;
+    border-radius: 4px;
+}
+
+.movies-row::-webkit-scrollbar-track {
+    background-color: #141414;
+}

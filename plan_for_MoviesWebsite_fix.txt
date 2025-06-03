@@ -1,0 +1,45 @@
+Information Gathered:
+- The file is a React functional component for a Movies Website.
+- It imports React, Firebase auth and database, and other components.
+- It manages state for language, movies, featured movie, user profile, and contact page visibility.
+- It filters movies by language and displays user details and movies.
+- It handles user login/logout, language change, and navigation to About and Contact pages.
+- The moviesList is a large array of movie objects with id, title, language, and base64 image data.
+
+Potential Issues to Check:
+- Proper handling of user state and Firebase database subscription.
+- Correct use of React hooks and state updates.
+- Handling of edge cases when userProfile or movies are empty.
+- Proper cleanup of Firebase onValue listener.
+- Correct rendering of ContactPage and AboutPage components.
+- Any missing or incorrect props usage.
+- Performance considerations with large base64 images.
+- Any syntax or runtime errors.
+
+Plan:
+1. Verify and fix Firebase onValue listener cleanup in useEffect.
+2. Ensure userProfile state is correctly set and used.
+3. Add error handling for missing or empty data.
+4. Confirm all props are used correctly and passed down.
+5. Optimize rendering of movies list and featured movie.
+6. Verify ContactPage and AboutPage navigation and rendering.
+7. Check for any missing imports or unused variables.
+8. Test logout functionality and state reset.
+9. Review CSS class usage for consistency.
+10. Test language change logic and UI update.
+11. Remove any console errors or warnings.
+12. Consider lazy loading or optimization for large images if needed.
+
+Dependent Files to Check:
+- src/ContactPage.js (for ContactPage component)
+- src/AboutPage.js (for AboutPage component)
+- src/firebase.js (for Firebase config and exports)
+
+Followup Steps:
+- After edits, test the app locally.
+- Verify user login/logout flows.
+- Check language switching and movie filtering.
+- Confirm navigation to About and Contact pages.
+- Monitor console for errors or warnings.
+
+Please confirm if I can proceed with this plan to rectify errors in MoviesWebsite.js.
