@@ -26,6 +26,26 @@ body, html, #root {
     color: #e50914;
 }
 
+.navbar-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #e50914;
+    border-radius: 4px;
+}
+
 .navbar-user {
     display: flex;
     align-items: center;
@@ -133,4 +153,76 @@ body, html, #root {
 
 .movies-row::-webkit-scrollbar-track {
     background-color: #141414;
+}
+
+/* Chat button */
+.chat-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #f40612;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .hero-banner {
+        height: 250px;
+        padding: 10px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .movies-main {
+        padding: 10px 20px;
+    }
+
+    .movies-row {
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    .movie-card {
+        min-width: 150px;
+    }
+
+    .movie-info h3 {
+        font-size: 16px;
+    }
+
+    .movie-info p {
+        font-size: 12px;
+    }
+
+    .chat-button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
 }

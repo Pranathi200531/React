@@ -36,19 +36,19 @@ function ContactPage({ onBack, currentUser }) {
   };
 
   return (
-    <div className="contact-page">
-      <nav className="navbar">
+    <div className="contact-page" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '80vh' }}>
+      <nav className="navbar" style={{ width: '100%', maxWidth: '600px' }}>
         <button className="back-button" onClick={onBack}>Back</button>
-        <h2>Contact Us</h2>
+        <h2 style={{ textAlign: 'center' }}>Contact Us</h2>
       </nav>
-      <main className="contact-main">
+      <main className="contact-main" style={{ width: '100%', maxWidth: '600px', textAlign: 'center' }}>
         <h3>Contact Information</h3>
         <p>Email: contact@moviesapp.com</p>
         <p>Phone: +1 234 567 8900</p>
         <p>Address: 123 Movie St, Film City, CA</p>
         <h3>Send us a message</h3>
-        <form onSubmit={handleSubmit}>
-          <label>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
+          <label style={{ width: '100%', textAlign: 'left' }}>
             Name:
             <input
               type="text"
@@ -57,10 +57,10 @@ function ContactPage({ onBack, currentUser }) {
               value={name}
               onChange={(e) => setName(e.target.value)}
               disabled={sending}
+              style={{ width: '100%' }}
             />
           </label>
-          <br />
-          <label>
+          <label style={{ width: '100%', textAlign: 'left' }}>
             Email:
             <input
               type="email"
@@ -69,10 +69,10 @@ function ContactPage({ onBack, currentUser }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={sending}
+              style={{ width: '100%' }}
             />
           </label>
-          <br />
-          <label>
+          <label style={{ width: '100%', textAlign: 'left' }}>
             Message:
             <textarea
               name="message"
@@ -80,10 +80,10 @@ function ContactPage({ onBack, currentUser }) {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               disabled={sending}
+              style={{ width: '100%' }}
             />
           </label>
-          <br />
-          <button type="submit" disabled={sending}>Send</button>
+          <button type="submit" disabled={sending} style={{ alignSelf: 'center' }}>Send</button>
         </form>
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {success && <p style={{ color: 'green' }}>{success}</p>}
